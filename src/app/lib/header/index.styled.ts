@@ -35,7 +35,7 @@ export const StyledLink = styled.div<StyledLinkProps>`
     .link-circle{
         position: absolute;
         top: -3px;
-        right: -8px;
+        right: -9px;
     }
 `
 

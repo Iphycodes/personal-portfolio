@@ -6,9 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "commitmsg": "commitlint -E HUSKY_GIT_PARAMS",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
@@ -16,7 +17,7 @@
     }
   },
   "lint-staged": {
-    "**/*.+(ts|tsx)": [
+    "*.{ts,tsx}": [
       "eslint --fix",
       "git add"
     ]

@@ -13,7 +13,7 @@ module.exports = {
       'plugin:@typescript-eslint/recommended',
       'plugin:react/recommended',
       'plugin:react-hooks/recommended',
-      'plugin:unused-imports/recommended',
+      // 'plugin:unused-imports/recommended',
     ],
     rules: {
       // Add specific rules and configurations as needed

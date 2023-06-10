@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mobile, Desktop, mediaSize, useMediaQuery } from '@/_shared/responsiveness';
+import { mediaSize, useMediaQuery } from '@/_shared/responsiveness';
 import { StyledBrandIcons, StyledFrontAdvertContainer, StyledFrontContent } from './index.styled';
 import CustomButton from '../_shared/custom-button';
 import { AiFillCaretRight } from 'react-icons/ai';
@@ -20,6 +20,7 @@ import {
 import { Typewriter } from 'react-simple-typewriter';
 
 const FrontAdvert = () => {
+
   const isMobile = useMediaQuery(mediaSize.mobile);
 
   const mobileBrandIcons = [

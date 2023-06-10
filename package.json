@@ -12,7 +12,6 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "npm run commitmsg",
       "pre-commit": "lint-staged"
     }
   },

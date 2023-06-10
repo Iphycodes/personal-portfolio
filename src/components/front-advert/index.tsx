@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mobile, mediaSize, useMediaQuery } from '@/_shared/responsiveness';
+import { Mobile, Desktop, mediaSize, useMediaQuery } from '@/_shared/responsiveness';
 import { StyledBrandIcons, StyledFrontAdvertContainer, StyledFrontContent } from './index.styled';
 import CustomButton from '../_shared/custom-button';
 import { AiFillCaretRight } from 'react-icons/ai';

@@ -1,10 +1,10 @@
-import HomePage from "@/components/homePage"
+import Home from "@/components/home"
 
 
 const HomePageContainer = () => {
 
     return (
-        <HomePage/>
+        <Home/>
     )
 }
 

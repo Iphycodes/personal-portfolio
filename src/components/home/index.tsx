@@ -1,10 +1,13 @@
 import Header from "../../app/lib/header"
+import FrontAdvert from "../front-advert"
 
 
 const HomePage = () => {
 
     return (
-        <div>Hello world</div>
+        <>
+        <FrontAdvert/>
+        </>
     )
 }
 

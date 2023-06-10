@@ -1,6 +1,9 @@
+import { mediaSize, useMediaQuery } from "@/_shared/responsiveness";
 import { createGlobalStyle } from "styled-components";
 
 const prefix = 'styled'
+// const isDesktop = useMediaQuery(mediaSize.desktop)
+// const isTablet = useMediaQuery(mediaSize.tablet)
 
 
 const theme = {
@@ -11,7 +14,11 @@ const theme = {
   accent: '#FCA311',
   lightBlack: '#0A0A0A',
   black: '#000000',
-  tertiary: '#495057'
+  tertiary: '#495057',
+  fonts: {
+    jost: `'Jost', sans-serif`,
+    palanquin: `'Palanquin', sans-serif`
+  },
   
   // Other style variables
 };
@@ -28,7 +35,7 @@ export const GlobalStyles = createGlobalStyle`
     color: #ffffff;
     background-color: ${theme.primaryColor};
     font-family: 'Palanquin', sans-serif;
-    line-height: 20px
+    line-height: 30px
   }
 
   a{

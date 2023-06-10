@@ -1,7 +1,7 @@
-import HomePageContainer from '@/containers/homePageContainer'
+import HomeContainer from '@/containers/home'
 
 export default function Home() {
   return (
-      <HomePageContainer/>
+      <HomeContainer/>
   )
 }

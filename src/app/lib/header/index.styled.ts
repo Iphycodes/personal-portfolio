@@ -13,7 +13,13 @@ export const HeaderContainer = styled.div`
     justify-content: space-between;
     padding: 10px 64px;
     align-items: center;
-    border-bottom: ${(props) => `2px solid ${props.theme.secondaryColor}`}   
+    border-bottom: ${(props) => `2px solid ${props.theme.secondaryColor}`};
+    z-index: 1;
+    background-color: ${(props) => props.theme.primaryColor };
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;   
 `
 
 export const NavLinksContainer = styled.div`

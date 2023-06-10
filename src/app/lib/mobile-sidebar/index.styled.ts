@@ -8,13 +8,14 @@ interface StyledMobileSidebarContainerProps {
 export const StyledMobileSidebarContainer = styled.div<StyledMobileSidebarContainerProps>`
     width: 75%;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: ${(props) => props.theme.lightBlack};
     transform: ${(props) => props.toggleSidebar ? 'translateX(0%)' : 'translateX(-100%)' } ;
     transition: all 0.4s;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 `
 
 export const StyledMobileSidebarHeader = styled.div`

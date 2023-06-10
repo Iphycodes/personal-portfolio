@@ -10,8 +10,28 @@ import AboutIcon from './AboutIcon.svg'
 import HomeIcon from './HomeIcon.svg'
 import ContactIcon from './ContactIcon.svg'
 import PortfolioIcon from './PortfolioIcon.svg'
+import IfeanyiPic from './IfeanyiPic.svg'
+import ThreeBoxes from './ThreeBoxes.svg'
+import BihanceIcon from './BihanceIcon.svg'
+import BihanceIconBig from './BehanceIconBig.svg'
+import SkillShareIconBig from './SkillShareIconBig.svg'
+import TablerIconBig from './TablerIconBig.svg'
+import UpworkIconBig from './UpworkIconBig.svg'
+import SkillShareICon from './SkillShareIcon.svg'
+import TablerIcon from './TablerIcon.svg'
+import UpworkIcon from './UpworkIcon.svg'
+import IfyFrontPic from './IfyFrontPic.svg'
 
 export {
+    IfyFrontPic,
+    BihanceIcon,
+    BihanceIconBig,
+    TablerIconBig,
+    UpworkIconBig,
+    SkillShareIconBig,
+    SkillShareICon,
+    TablerIcon,
+    UpworkIcon,
     AboutIcon,
     HomeIcon,
     ContactIcon,
@@ -23,5 +43,7 @@ export {
     PortfolioLogo,
     MobileHamburger,
     MobileLogo,
-    Hamburger
+    Hamburger,
+    IfeanyiPic,
+    ThreeBoxes
 }

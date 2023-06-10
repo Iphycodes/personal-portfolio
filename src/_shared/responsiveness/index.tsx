@@ -40,7 +40,7 @@ export const mediaSize: Record<string, string> = {
 export const Desktop = ({ children, className, style }: ResponsivenessType) => {
   const isDesktop = useMediaQuery(mediaSize.desktop);
   return isDesktop ? (
-    <div className={className} style={style} data-testid={'desktop'}>
+    <div className={className} style={{...style, margin: 0, padding: 0}} data-testid={'desktop'}>
       {children}
     </div>
   ) : null;

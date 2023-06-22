@@ -42,7 +42,7 @@ const SlideLoaders: React.FC = forwardRef((_, ref) => {
     childFunction,
   }));
 
-  const time = 8;
+  const time = 7;
 
   useEffect(() => {
     let intervalId: any;

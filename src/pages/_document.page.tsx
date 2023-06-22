@@ -10,7 +10,8 @@ export default function Document() {
         <link href="https://fonts.googleapis.com/css2?family=Palanquin&family=Quicksand&display=swap" rel="stylesheet"></link>
         {/* <link href="https://fonts.googleapis.com/css2?family=Jost&family=Palanquin&display=swap" rel="stylesheet"></link> */}
         <link href="https://fonts.googleapis.com/css2?family=Jost:wght@800&family=Palanquin&display=swap" rel="stylesheet"></link>
-      </Head>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Jost:wght@800&family=Joti+One&family=Palanquin&display=swap" rel="stylesheet"/>      
+        </Head>
       <body>
         <Main />
         <NextScript />

@@ -15,5 +15,5 @@ export const StyledMobileHeaderContainer = styled.div<MobileContainerProps>`
     top: 0;
     left: 0;
     width: 100vw;
-    z-index: 1
+    z-index: 10
 `

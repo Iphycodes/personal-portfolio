@@ -1,14 +1,20 @@
-import Header from "../../app/lib/header"
-import FrontAdvert from "../front-advert"
-
+import TimeExperienceContainer from '@/containers/home/libs/time-experience';
+import FrontAdvert from './libs/front-advert';
+import AboutSection from './libs/about-section';
+import {useContext} from 'react'
+import { AppContext } from '@/app-context';
 
 const HomePage = () => {
 
-    return (
-        <>
-        <FrontAdvert/>
-        </>
-    )
-}
+  const {slideCurrent} = useContext(AppContext)
 
-export default HomePage
+  return (
+    <>
+      <FrontAdvert />
+      <TimeExperienceContainer />
+      <AboutSection toShow={slideCurrent}/>
+    </>
+  );
+};
+
+export default HomePage;

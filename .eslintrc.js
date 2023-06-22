@@ -15,6 +15,11 @@ module.exports = {
       'plugin:react-hooks/recommended',
       // 'plugin:unused-imports/recommended',
     ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
     rules: {
       // Add specific rules and configurations as needed
       "@typescript-eslint/no-unused-vars": ["error"],
@@ -22,6 +27,7 @@ module.exports = {
       "@typescript-eslint/no-empty-function": ["warn"],
       "@typescript-eslint/no-explicit-any": "off",
       "react/no-unescaped-entities": "off",
-      "import/no-anonymous-default-export": "off"
+      "import/no-anonymous-default-export": "off",
+      "react/react-in-jsx-scope": "off"
     },
 };

@@ -30,20 +30,27 @@ export const StyledFrontContent = styled.div<FrontAdvertContainerProps>`
     justify-content: center;
     position: relative;
 
-    div {
-        font-family: ${(props) => props.theme.fonts.jost};
-        font-size: ${(props) => props.isMobile ? '54px' : '98px'};
-        /* line-height: 40px; */
+    .description {
+        /* font-family: ${(props) => props.theme.fonts.jost}; */
+        font-family: 'Anton', sans-serif;
+        font-size: ${(props) => props.isMobile ? '64px' : '120px'};
+        font-weight: bolder;
+        line-height: ${(props) => props.isMobile ? '60px' : '90px'};;
+        padding: 0;
+        margin: 0;
+        letter-spacing: 10px;
 
 
-        &.name{
-            color: ${(props) => props.theme.accent}
+        .name{
+            color: ${(props) => props.theme.accent};
+            letter-spacing: ${(props) => props.isMobile ? '20px' : '16px'};
         }
     }
 
     .role{
             font-family: ${(props) => props.theme.fonts.palanquin};
-            font-weight: bold
+            font-weight: bold;
+            letter-spacing: 5px;
     }
 
     .button-container{
@@ -57,8 +64,8 @@ export const StyledFrontContent = styled.div<FrontAdvertContainerProps>`
 
     .three-boxes{
         position: absolute;
-        top: -12%;
-        left: 18%;      
+        top: -2%;
+        left: 15%;      
     }
 `
 

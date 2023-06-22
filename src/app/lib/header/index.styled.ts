@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { ReactElement } from "react";
 import styled from "styled-components"
 
@@ -14,7 +13,7 @@ export const HeaderContainer = styled.div`
     padding: 10px 64px;
     align-items: center;
     border-bottom: ${(props) => `2px solid ${props.theme.secondaryColor}`};
-    z-index: 1;
+    z-index: 10;
     background-color: ${(props) => props.theme.primaryColor };
     position: fixed;
     top: 0;

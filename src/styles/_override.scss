@@ -486,7 +486,7 @@ circle.ant-progress-circle-path {
   position: absolute;
   top: 30px;
   left: 680px;
-  zindex: 200;
+  z-index: 200;
 }
 
 //.serviceListIcon {
@@ -555,31 +555,51 @@ circle.ant-progress-circle-path {
 }
 
 //customer slick
-.customer_slider {
-  @media (min-width: 721px) {
-  .slick-slider {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-    svg.prev-arrow,
-    .next-arrow {
-      position: absolute;
-      left: -3%;
-      top: 32%;
-      box-shadow: 0 2px 12px rgba(1,1,1,0.05);
-      border-radius: 50%;
-      cursor: pointer;
-      @media screen and (max-width: 991px) {
-        left: 82%;
-      }
-    }
-    svg.next-arrow {
-      left: 100%;
-      top: 32%;
+// .customer_slider {
+  // @media (min-width: 721px) {
+.slick-slider {
+    // position: relative;
+    // width: 80%;
+    // margin: 0 auto;
+
+  //   svg.prev-arrow,
+  //   .next-arrow {
+  //     position: absolute;
+  //     left: -3%;
+  //     top: 32%;
+  //     box-shadow: 0 2px 12px rgba(1,1,1,0.05);
+  //     border-radius: 50%;
+  //     cursor: pointer;
+  //     @media screen and (max-width: 991px) {
+  //       left: 82%;
+  //     }
+  //   }
+  //   svg.next-arrow {
+  //     left: 100%;
+  //     top: 32%;
+  //   }
+  // }
+  .slick-track {
+    display: flex !important;
+    gap: 40px !important;
+
+    @media screen and (max-width: 767px){
+      gap: 10px !important;
     }
   }
-    .slick-dots {
-      bottom: -40px;
+
+    // .slick-dots {
+    //   bottom: -40px;
+    // }
+ }
+
+ .about-desc-slider{
+
+  .slick-slider{
+
+    .slick-track{
+      display: flex !important;
+      gap: 0 !important;
     }
   }
-}
+ }

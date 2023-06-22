@@ -21,9 +21,11 @@ import SkillShareICon from './SkillShareIcon.svg'
 import TablerIcon from './TablerIcon.svg'
 import UpworkIcon from './UpworkIcon.svg'
 import IfyFrontPic from './IfyFrontPic.svg'
+import AboutImage from './AboutImage.svg'
 
 export {
     IfyFrontPic,
+    AboutImage,
     BihanceIcon,
     BihanceIconBig,
     TablerIconBig,

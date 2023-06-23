@@ -56,32 +56,40 @@ const FrontAdvert = () => {
     <div className="background">
       <StyledFrontAdvertContainer isMobile={isMobile}>
         <StyledFrontContent isMobile={isMobile} style={{ gap: isMobile ? 0 : 0 }}>
-          <div className='description'>
-          <div style={{ fontSize: '32px', zIndex: 1, position: 'relative' }}>Hey,</div>
-          <div>
-            <span style={{ fontSize: '36px', color: '#B0720C' }}>I'm</span> IFEANYI
+          <div className="description">
+            <div style={{ fontSize: '32px', zIndex: 1, position: 'relative' }}>Hey,</div>
+            <div>
+              <span style={{ fontSize: '36px', color: '#B0720C' }}>I'm</span> <span style={{letterSpacing: isMobile ? '2px' : '8px'}}>IFEANYI</span> 
+            </div>
+            <div className="name">OGBONNA</div>
+            <div
+              className="role"
+              style={{
+                fontSize: isMobile ? '20px' : '24px',
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <BsDot size={40} style={{ marginLeft: '-15px' }} color="#ffffff" />
+              <Typewriter
+                words={[
+                  'Frontend Developer',
+                  'UI/UX Designer',
+                  'React Js',
+                  'Next Js',
+                  'Typescript',
+                ]}
+                loop
+                cursor
+                cursorBlinking={true}
+                cursorStyle={<span style={{ fontSize: '32px', marginBottom: '-10%' }}>|</span>}
+                typeSpeed={150}
+                deleteSpeed={80}
+                delaySpeed={2000}
+              />
+            </div>
           </div>
-          <div className="name">
-            OGBONNA
-          </div>
-          <div
-            className="role"
-            style={{ fontSize: isMobile ? '20px' : '24px', display: 'flex', alignItems: 'center' }}
-          >
-            <BsDot size={40} style={{ marginLeft: '-15px' }} color="#ffffff" />
-            <Typewriter
-              words={['Frontend Developer', 'UI/UX Designer', 'React Js', 'Next Js', 'Typescript']}
-              loop
-              cursor
-              cursorBlinking={true}
-              cursorStyle={<span style={{ fontSize: '32px', marginBottom: '-10%' }}>|</span>}
-              typeSpeed={150}
-              deleteSpeed={80}
-              delaySpeed={2000}
-            />
-          </div>
-          </div>
-          
+
           <div className="button-container" style={{ gap: 15, lineHeight: 0 }}>
             <CustomButton category="ghost" shape="round" border="1px solid #ffffff">
               Hire Me

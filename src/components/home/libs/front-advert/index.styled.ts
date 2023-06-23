@@ -31,19 +31,22 @@ export const StyledFrontContent = styled.div<FrontAdvertContainerProps>`
     position: relative;
 
     .description {
-        /* font-family: ${(props) => props.theme.fonts.jost}; */
-        font-family: 'Anton', sans-serif;
-        font-size: ${(props) => props.isMobile ? '64px' : '120px'};
+        font-family: ${(props) => props.theme.fonts.jost};
+        /* font-family: 'Anton', sans-serif; */
+        font-size: ${(props) => props.isMobile ? '64px' : '100px'};
         font-weight: bolder;
-        line-height: ${(props) => props.isMobile ? '60px' : '90px'};;
+        line-height: ${(props) => props.isMobile ? '60px' : '80px'};;
         padding: 0;
         margin: 0;
-        letter-spacing: 10px;
+        /* letter-spacing: 10px; */
 
 
         .name{
             color: ${(props) => props.theme.accent};
-            letter-spacing: ${(props) => props.isMobile ? '20px' : '16px'};
+            background-image: linear-gradient(to left, #FCA311 40%, #FFD99B);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         }
     }
 

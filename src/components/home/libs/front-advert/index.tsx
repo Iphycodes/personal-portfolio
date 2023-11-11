@@ -59,7 +59,7 @@ const FrontAdvert = () => {
           <div className="description">
             <div style={{ fontSize: '32px', zIndex: 1, position: 'relative' }}>Hey,</div>
             <div>
-              <span style={{ fontSize: '36px', color: '#B0720C' }}>I'm</span> <span style={{letterSpacing: isMobile ? '2px' : '8px'}}>IFEANYI</span> 
+              <span style={{ fontSize: '36px', color: '#B0720C' }}>I'm</span> <span style={{letterSpacing: isMobile ? '2px' : '4px'}}>IFEANYI</span> 
             </div>
             <div className="name">OGBONNA</div>
             <div
@@ -74,10 +74,10 @@ const FrontAdvert = () => {
               <Typewriter
                 words={[
                   'Frontend Developer',
-                  'UI/UX Designer',
                   'React Js',
                   'Next Js',
                   'Typescript',
+                  'Technocrat'
                 ]}
                 loop
                 cursor

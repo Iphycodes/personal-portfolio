@@ -139,7 +139,7 @@ const AboutSection = (props: AboutSectionProps) => {
   }
 
   return (
-    <StyledAboutSectionContainer isMobile={isMobile} style={{ gap: 100 }}>
+    <StyledAboutSectionContainer isMobile={isMobile} style={{ }}>
       <StyledAboutImageSection isMobile={isMobile}>
         <SocialProfile />
         <AboutImage />
@@ -173,8 +173,8 @@ const AboutSection = (props: AboutSectionProps) => {
               return (
                 <StyledAboutSectionDescription key={index}>
                   <div>
-                    <div className="title">{title}</div>
-                    <div className="description" dangerouslySetInnerHTML={{__html: description}}></div>
+                    <div className="item-title">{title}</div>
+                    <div className="item-description" dangerouslySetInnerHTML={{__html: description}}></div>
                   </div>
                   
                   <Link className="learn-more-link" href={'/about'} style={{display: index === toShow ? 'flex' : 'none'}}>

@@ -15,6 +15,7 @@ const theme = {
   lightBlack: '#0A0A0A',
   black: '#000000',
   tertiary: '#495057',
+  item_description_color: '#cccccc',
   fonts: {
     jost: `'Jost', sans-serif`,
     palanquin: `'Palanquin', sans-serif`
@@ -51,6 +52,15 @@ export const GlobalStyles = createGlobalStyle`
   .pointer{
     cursor: pointer
   }
+
+  .title{
+        font-size: 60px;
+        font-family: ${theme.fonts.jost};
+        background-image: linear-gradient(to left, #ffffff 40%, #cccccc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 `;
 
 export default theme;

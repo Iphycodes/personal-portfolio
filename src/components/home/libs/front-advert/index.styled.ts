@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 
 interface FrontAdvertContainerProps {
@@ -23,32 +23,49 @@ export const StyledFrontAdvertContainer = styled.div<FrontAdvertContainerProps>`
     margin-top: ${(props) => props.isMobile ? '60px' : '60px'};
 `
 
+const gradientAnimation = keyframes`
+  0% {
+    background-position: -200% 0%;
+  }
+  50% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: -200% 0%;
+  }
+`;
+
 export const StyledFrontContent = styled.div<FrontAdvertContainerProps>`
     display: flex;
     flex-direction: column;
-    /* align-items: flex-start; */
     justify-content: center;
     position: relative;
 
     .description {
         font-family: ${(props) => props.theme.fonts.jost};
         /* font-family: 'Anton', sans-serif; */
-        font-size: ${(props) => props.isMobile ? '64px' : '100px'};
+        font-size: ${(props) => props.isMobile ? '64px' : '6vw'};
         font-weight: bolder;
         line-height: ${(props) => props.isMobile ? '60px' : '80px'};;
         padding: 0;
         margin: 0;
         /* letter-spacing: 10px; */
 
-
-        .name{
-            color: ${(props) => props.theme.accent};
-            background-image: linear-gradient(to left, #FCA311 40%, #FFD99B);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
+        .name {
+      font-family: ${(props) => props.theme.fonts.jost};
+      font-size: ${(props) => (props.isMobile ? "64px" : "96px")};
+      font-weight: bolder;
+      line-height: ${(props) => (props.isMobile ? "60px" : "80px")};
+      padding: 0;
+      margin: 0;
+      /* letter-spacing: 10px; */
+      background-image: linear-gradient(to left, #fca311 40%, #FFD288);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: ${gradientAnimation} 6s linear infinite;
     }
+        }
 
     .role{
             font-family: ${(props) => props.theme.fonts.palanquin};

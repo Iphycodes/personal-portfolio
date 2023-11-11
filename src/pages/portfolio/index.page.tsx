@@ -3,7 +3,7 @@
 const PortfolioPage = () => {
 
     return (
-        <div>Our Portfolio</div>
+        <div>Portfolio</div>
     )
 }
 

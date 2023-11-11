@@ -4,7 +4,7 @@ import { BsPauseCircle, BsPlayCircle } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import { AppContext } from '@/app-context';
 
-const SlideLoaders: React.FC = forwardRef((_, ref) => {
+const SlideLoaders = forwardRef((_, ref) => {
   const [slideLoaderItems, setSlideLoaderItems] = useState<React.ReactNode[]>([]);
   const [widths, setWidths] = useState<number[]>([0, 0, 0, 0]);
   const [pause, setPause] = useState<boolean>(false);

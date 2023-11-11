@@ -10,11 +10,11 @@ export const StyledAboutSectionContainer = styled.div<AboutSectionProps>`
   overflow-x: hidden;
   background-color: ${(props) => props.theme.secondaryColor};
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   padding: ${(props) => (props.isMobile ? '24px' : '64px 120px 0')};
-  /* align-items: center; */
   padding-bottom: 0;
   position: relative;
+  height: ${(props) => props.isMobile ? '900px' : ''};
 `;
 
 export const StyledAboutImageSection = styled.div<AboutSectionProps>`
@@ -24,6 +24,7 @@ export const StyledAboutImageSection = styled.div<AboutSectionProps>`
   justify-content: center;
   padding: 0;
   position: relative;
+  bottom: 0;
 `;
 
 export const StyledAboutSectionContent = styled.div<AboutSectionProps>`
@@ -131,15 +132,15 @@ export const StyledAboutSectionDescription = styled.div<StyledAboutSectionDescri
   transition: all 1s ease-in-out;
   position: relative;
 
-  .title {
+  .item-title {
     font-size: 20px;
     text-transform: capitalize;
     font-weight: bold;
     margin-bottom: 5px;
   }
 
-  .description {
-    color: #cccccc;
+  .item-description {
+    color: ${(props) => props.theme.item_description_color};
     text-align: justify;
   }
 `;

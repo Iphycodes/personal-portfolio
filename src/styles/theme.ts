@@ -1,9 +1,8 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 // const prefix = 'styled'
 // const isDesktop = useMediaQuery(mediaSize.desktop)
 // const isTablet = useMediaQuery(mediaSize.tablet)
-
 
 const theme = {
   primaryColor: '#1d1d1d',
@@ -17,16 +16,18 @@ const theme = {
   tertiary: '#495057',
   item_description_color: '#cccccc',
   fonts: {
+    // jost: `'Jost', sans-serif`,
     jost: `'Jost', sans-serif`,
-    palanquin: `'Palanquin', sans-serif`
+    // palanquin: `'Palanquin', sans-serif`
+    palanquin: `'Roboto Mono', monospace`,
   },
   assets: {
-    learn_tag_color: '#1d1d1d'
+    learn_tag_color: '#1d1d1d',
   },
   shadows: {
-    light_grey_shadow: '2px, 3px rgba(0, 0, 0, 0.4)'
-  }
-  
+    light_grey_shadow: '2px, 3px rgba(0, 0, 0, 0.4)',
+  },
+
   // Other style variables
 };
 

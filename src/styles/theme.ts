@@ -1,32 +1,33 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 // const prefix = 'styled'
 // const isDesktop = useMediaQuery(mediaSize.desktop)
 // const isTablet = useMediaQuery(mediaSize.tablet)
 
-
 const theme = {
   primaryColor: '#1d1d1d',
-  secondaryColor: '#161616',
+  secondaryColor: '#0a0a0a',
   on_secondary: '#E9ECEF',
   on_tertiary: '#DEE2E6',
   primaryText: '#F8F9FA',
-  accent: '#FCA311',
+  // accent: '#FCA311',
+  accent: '#BAE935',
   lightBlack: '#0A0A0A',
   black: '#000000',
   tertiary: '#495057',
   item_description_color: '#cccccc',
   fonts: {
     jost: `'Jost', sans-serif`,
-    palanquin: `'Palanquin', sans-serif`
+    palanquin: `'Palanquin', sans-serif`,
+    redditMono: `'Reddit Mono', sans-serif`,
   },
   assets: {
-    learn_tag_color: '#1d1d1d'
+    learn_tag_color: '#1d1d1d',
   },
   shadows: {
-    light_grey_shadow: '2px, 3px rgba(0, 0, 0, 0.4)'
-  }
-  
+    light_grey_shadow: '2px, 3px rgba(0, 0, 0, 0.4)',
+  },
+
   // Other style variables
 };
 

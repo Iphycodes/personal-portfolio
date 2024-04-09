@@ -16,7 +16,6 @@ const Header = () => {
 
     return (
         <HeaderContainer>
-            {/* <PortfolioLogo/> */}
             <PortfolioLogoSmall/>
             <NavLinksContainer style={{gap: isTablet ? 40 : 60}}>
                 {

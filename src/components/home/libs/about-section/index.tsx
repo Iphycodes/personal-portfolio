@@ -1,14 +1,13 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  StyledAboutImageSection,
+  StyledAboutImagesContainer,
   StyledAboutSectionContainer,
   StyledAboutSectionContent,
   StyledAboutSectionDescription,
   StyledArrowContainer,
 } from './index.styled';
-import { AboutImage } from '@/_shared/assets/svgs';
-import SocialProfile from '../social-profiles';
+
 import { AiFillCaretRight } from 'react-icons/ai';
 import Link from 'next/link';
 import SlideLoaders from './libs/slide-loaders';
@@ -17,6 +16,7 @@ import { AppContext } from '@/app-context';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { CSSProperties } from 'styled-components';
 import { mediaSize, useMediaQuery } from '@/_shared/responsiveness';
+import Image from 'next/image';
 
 interface AboutSectionProps {
   toShow: number;
@@ -34,7 +34,7 @@ const AboutSection = (props: AboutSectionProps) => {
   const sliderRef = useRef<Slider>(null);
   const slideLoaderRef = useRef<any>(null);
   const [content, setContent] = useState('');
-  const isMobile = useMediaQuery(mediaSize.mobile)
+  const isMobile = useMediaQuery(mediaSize.mobile);
 
   const goToSlide = (slideIndex: number) => {
     if (sliderRef.current) {
@@ -45,15 +45,18 @@ const AboutSection = (props: AboutSectionProps) => {
   const aboutData = [
     {
       title: 'About Me',
-      description: 'I\'m a dedicated frontend developer with a knack for transforming ideas into captivating digital experiences. With a deep passion for coding and a keen eye for design, I specialize in crafting visually stunning and user-friendly websites and web applications that leave a lasting impression.<br> Collaboration is at the heart of my approach. I actively engage with clients and team members to understand project goals, working closely with designers and backend developers to bring ideas to life.',
+      description:
+        "I'm a dedicated frontend developer with a knack for transforming ideas into captivating digital experiences. With a deep passion for coding and a keen eye for design, I specialize in crafting visually stunning and user-friendly websites and web applications that leave a lasting impression.<br> Collaboration is at the heart of my approach. I actively engage with clients and team members to understand project goals, working closely with designers and backend developers to bring ideas to life.",
     },
     {
       title: 'Career Aims and Objective',
-      description: 'As a frontend developer, my ultimate goal is to craft visually stunning and intuitive web experiences that captivate users. I strive to stay at the forefront of cutting-edge technologies and trends, continuously enhancing my skills to deliver innovative solutions. Collaborating with talented teams, I aim to create impactful websites and applications that make a positive difference in people\'s lives. Through continuous growth, I aspire to become a respected authority in the frontend development community, driving the industry forward with my expertise and passion.',
+      description:
+        'As a frontend developer, my ultimate goal is to craft visually stunning and intuitive web experiences that captivate users. I strive to stay at the forefront of cutting-edge technologies and trends, continuously enhancing my skills to deliver innovative solutions.',
     },
     {
       title: 'Academic Background',
-      description: 'With a strong academic foundation, I bring expertise and a thirst for knowledge to every project. Armed with a <strong>Bachelors degree in Bsc. Computer Science from the prestigious Ahmadu Bello University, Nigeria</strong>, I possess a solid understanding of fundamental principles and the ability to tackle complex challenges. My educational journey has equipped me with a diverse skill set, including problem-solving, critical thinking, and effective communication. Combined with my passion for continuous learning, my academic background enables me to deliver innovative and well-rounded solutions that exceed expectations.',
+      description:
+        'With a strong academic foundation, I bring expertise and a thirst for knowledge to every project. Armed with a <strong>Bachelors degree in Bsc. Computer Science from the prestigious Ahmadu Bello University, Nigeria</strong>, I possess a solid understanding of fundamental principles and the ability to tackle complex challenges. My educational journey has equipped me with a diverse skill set, including problem-solving, critical thinking, and effective communication.',
     },
     {
       title: 'Career Summary',
@@ -67,8 +70,6 @@ const AboutSection = (props: AboutSectionProps) => {
 
     setContent(aboutData[toShow]?.title || '');
   }, [toShow]);
-
-  
 
   const settings = {
     dots: false,
@@ -139,11 +140,40 @@ const AboutSection = (props: AboutSectionProps) => {
   }
 
   return (
-    <StyledAboutSectionContainer isMobile={isMobile} style={{ }}>
-      <StyledAboutImageSection isMobile={isMobile}>
+    <StyledAboutSectionContainer isMobile={isMobile} style={{}}>
+      {/* <StyledAboutImageSection isMobile={isMobile}>
         <SocialProfile />
         <AboutImage />
-      </StyledAboutImageSection>
+      </StyledAboutImageSection> */}
+      <StyledAboutImagesContainer>
+        <div className="image-container left">
+          <Image
+            src={'/assets/imgs/suit-pic.jpg'}
+            alt="suite-pic"
+            width={300}
+            height={450}
+            style={{ width: '100%', height: '100%' }}
+          />
+        </div>
+        <div className="image-container right">
+          <div className="right-pic-container">
+            <Image
+              src={'/assets/imgs/graduating-pic.jpg'}
+              alt="graduating-pic"
+              width={300}
+              height={380}
+              style={{ width: '100%', height: '100%', borderRadius: '30px' }}
+            />
+          </div>
+          <div className="right-content">
+            <span style={{ fontSize: '64px' }}>3</span>
+            <span style={{ color: '#ffffff' }}>
+              Years of <b />
+              Experience
+            </span>
+          </div>
+        </div>
+      </StyledAboutImagesContainer>
       <StyledAboutSectionContent isMobile={isMobile} style={{ gap: 40 }}>
         <div className="content-title">
           <div className="about">ABOUT</div>
@@ -151,7 +181,11 @@ const AboutSection = (props: AboutSectionProps) => {
             <span className="ghost-text">IFEANYI</span> OGBONNA
           </div>
           {aboutData.map(({ title }, index) => {
-            return <span key={index} className={`tag ${content === title ? '' : 'fade-out'}`}>{title}</span>;
+            return (
+              <span key={index} className={`tag ${content === title ? '' : 'fade-out'}`}>
+                {title}
+              </span>
+            );
           })}
           {/* <span className={`tag ${content === '' ? 'fade-out' : ''}`}>{content}</span> */}
           {/* <span className={`tag`}>{content}</span> */}
@@ -174,13 +208,21 @@ const AboutSection = (props: AboutSectionProps) => {
                 <StyledAboutSectionDescription key={index}>
                   <div>
                     <div className="item-title">{title}</div>
-                    <div className="item-description" dangerouslySetInnerHTML={{__html: description}}></div>
+                    <div
+                      className="item-description"
+                      dangerouslySetInnerHTML={{ __html: description }}
+                    ></div>
                   </div>
-                  
-                  <Link className="learn-more-link" href={'/about'} style={{display: index === toShow ? 'flex' : 'none'}}>
+
+                  <Link
+                    className="learn-more-link"
+                    href={'/about'}
+                    style={{ display: index === toShow ? 'flex' : 'none' }}
+                  >
                     <span className="learn-more-icon">
                       <AiFillCaretRight />
-                    </span> <span>Learn more</span> 
+                    </span>{' '}
+                    <span>Learn more</span>
                   </Link>
                 </StyledAboutSectionDescription>
               );

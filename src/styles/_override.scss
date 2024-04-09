@@ -544,23 +544,21 @@ circle.ant-progress-circle-path {
 }
 
 .pricing_card {
-
   &:hover {
     .pricing_button {
       background-position: left top;
       color: #fff;
     }
-
   }
 }
 
 //customer slick
 // .customer_slider {
-  // @media (min-width: 721px) {
+// @media (min-width: 721px) {
 .slick-slider {
-    // position: relative;
-    // width: 80%;
-    // margin: 0 auto;
+  // position: relative;
+  // width: 80%;
+  // margin: 0 auto;
 
   //   svg.prev-arrow,
   //   .next-arrow {
@@ -583,62 +581,58 @@ circle.ant-progress-circle-path {
     display: flex !important;
     gap: 40px !important;
 
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px) {
       gap: 10px !important;
     }
   }
 
-    // .slick-dots {
-    //   bottom: -40px;
-    // }
- }
+  // .slick-dots {
+  //   bottom: -40px;
+  // }
+}
 
- .about-desc-slider{
-
-  .slick-slider{
-
-    .slick-track{
+.about-desc-slider {
+  .slick-slider {
+    .slick-track {
       display: flex !important;
       gap: 0 !important;
     }
   }
- }
+}
 
- .services-item-container{
-  .slick-slider{
+.services-item-container,
+.experience-item-container {
+  .slick-slider {
     position: relative !important;
     width: 100% !important;
     display: flex !important;
-      justify-content: space-around !important;
+    justify-content: space-around !important;
 
-    .prev-arrow-div{
+    .prev-arrow-div {
       position: absolute !important;
       top: 45% !important;
       left: 1% !important;
       z-index: 1;
     }
 
-    .next-arrow-div{
+    .next-arrow-div {
       position: absolute !important;
       top: 45% !important;
       right: 1% !important;
       transform: translateX(-60px);
     }
 
-    .slick-track{
+    .slick-track {
       display: flex !important;
       justify-content: space-between !important;
-      
-
-      
     }
   }
- }
+}
 
- .total-circle{
-  svg{
-    circle:first-child{
+.total-circle {
+  svg {
+    circle:first-child {
       stroke: #1d1d1d;
     }
   }
- }
+}

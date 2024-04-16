@@ -24,7 +24,6 @@ const theme = {
     light_grey_shadow: '2px, 3px rgba(0, 0, 0, 0.4)',
   },
 
-  // Other style variables
 };
 
 export const GlobalStyles = createGlobalStyle`

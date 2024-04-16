@@ -1,9 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-// const prefix = 'styled'
-// const isDesktop = useMediaQuery(mediaSize.desktop)
-// const isTablet = useMediaQuery(mediaSize.tablet)
-
 const theme = {
   primaryColor: '#1d1d1d',
   secondaryColor: '#0a0a0a',

@@ -11,10 +11,11 @@ export const StyledAboutSectionContainer = styled.div<AboutSectionProps>`
   background-color: ${(props) => props.theme.secondaryColor};
   display: flex;
   justify-content: space-between;
+  gap: 50px;
   padding: ${(props) => (props.isMobile ? '24px' : '64px 120px 0')};
   padding-bottom: 0;
   position: relative;
-  height: ${(props) => props.isMobile ? '900px' : ''};
+  height: ${(props) => (props.isMobile ? '900px' : '')};
 `;
 
 export const StyledAboutImageSection = styled.div<AboutSectionProps>`
@@ -31,8 +32,8 @@ export const StyledAboutSectionContent = styled.div<AboutSectionProps>`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: ${(props) => (props.isMobile ? '24px 0' : '24px 0 0')};
-  width: ${(props) => (props.isMobile ? '100%' : '45%')};
+  padding: ${(props) => (props.isMobile ? '24px 0' : '5px 0 0')};
+  width: ${(props) => (props.isMobile ? '100%' : '50%')};
 
   .content-title {
     font-family: ${(props) => props.theme.fonts.jost};
@@ -159,5 +160,51 @@ export const StyledArrowContainer = styled.span`
 
   &:hover {
     background-color: ${(props) => props.theme.black};
+  }
+`;
+
+export const StyledAboutImagesContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  .image-container {
+    max-width: 300px;
+    height: 450px;
+    max-height: 450px;
+    overflow-y: hidden;
+  }
+
+  .right {
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .right-pic-container {
+      height: 75%;
+      background-color: orange;
+      border-radius: 30px;
+    }
+
+    .right-content {
+      height: 20%;
+      background-color: ${(props) => props.theme.primaryColor};
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 16px;
+      padding: 0 20px;
+      font-family: ${(props) => props.theme.fonts.jost};
+      color: ${(props) => props.theme.accent};
+    }
+  }
+
+  .left {
+    margin-top: 80px;
+    background-color: blue;
+    border-radius: 30px;
   }
 `;

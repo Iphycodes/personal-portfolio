@@ -22,7 +22,7 @@ const TimeExperience = () => {
     {
       title: 'UI/UX Design',
       description:
-        'I create well structured and responsive UI/UX designs with the use of design tools such as Figma, Sketch and Adobe XD',
+        'I create well structured and responsive UI/UX designs with the use of design tools such as Figma, Sketch and Adobe XD.',
     },
     {
       title: 'Website Designer',

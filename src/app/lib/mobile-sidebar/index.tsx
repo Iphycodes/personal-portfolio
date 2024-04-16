@@ -37,9 +37,9 @@ const MobileSideBar = (props: MobileSidebarProps) => {
       </StyledMobileSidebarHeader>
       <StyledMobileSiderLinksContainer>
         {
-            navLinks.map(({label, to, icon}) => {
+            navLinks.map(({label, to, icon}, idx) => {
                 return (
-                    <StyledMobileSiderLink style={{gap: 20}} onClick={() => {
+                    <StyledMobileSiderLink key={idx} style={{gap: 20}} onClick={() => {
                         push(`/${to}`)
                         setToogleSidebar(false)
                         }}>

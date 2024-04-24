@@ -88,9 +88,6 @@ const FrontAdvert = () => {
                 <span>VIEW MY WORKS</span>
               </div>
             </div>
-            {/* <div className="three-boxes">
-            <ThreeBoxes />
-          </div> */}
           </StyledFrontContent>
           <StyledBrandIcons isMobile={isMobile} style={{ gap: 30 }}>
             <>
@@ -115,7 +112,7 @@ const FrontAdvert = () => {
             <Image
               src={'/assets/imgs/main-pic-darkyy.png'}
               alt="main-pic-dark"
-              width={800}
+              width={900}
               height={600}
               style={{ height: '110%' }}
             />

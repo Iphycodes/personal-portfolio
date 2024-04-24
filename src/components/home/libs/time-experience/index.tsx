@@ -44,7 +44,7 @@ const TimeExperience = () => {
        <StyledTimeExperienceBox isMobile={isMobile}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
           <div className="year_amount">
-            <span className='year' style={{ fontSize: isMobile ? '60px' : '96px', lineHeight: '10px' }}>1</span>+
+            <span className='year' style={{ fontSize: isMobile ? '60px' : '96px', lineHeight: '10px' }}>2</span>+
           </div>
           <div className="year_text">
             <div>Years</div>

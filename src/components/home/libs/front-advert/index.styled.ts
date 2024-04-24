@@ -26,6 +26,7 @@ export const LeftSider = styled.div`
 
 export const StyledFrontAdvertContainer = styled.div<FrontAdvertContainerProps>`
   max-width: calc(100vw - 100px);
+  width: calc(100vw - 100px);
   margin: 0;
   overflow-x: hidden;
   overflow-y: hidden;

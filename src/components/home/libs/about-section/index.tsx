@@ -166,7 +166,7 @@ const AboutSection = (props: AboutSectionProps) => {
             />
           </div>
           <div className="right-content">
-            <span style={{ fontSize: '64px' }}>3</span>
+            <span style={{ fontSize: '64px' }}>2</span>
             <span style={{ color: '#ffffff' }}>
               Years of <b />
               Experience
@@ -187,12 +187,9 @@ const AboutSection = (props: AboutSectionProps) => {
               </span>
             );
           })}
-          {/* <span className={`tag ${content === '' ? 'fade-out' : ''}`}>{content}</span> */}
-          {/* <span className={`tag`}>{content}</span> */}
         </div>
 
         <SlideLoaders ref={slideLoaderRef} />
-        {/* <button onClick={() => handleChildFunction('next')}>Child function</button> */}
 
         <div className="about-desc-slider">
           <Slider
@@ -235,13 +232,3 @@ const AboutSection = (props: AboutSectionProps) => {
 };
 
 export default AboutSection;
-
-// function PrevArrow({ onClick }: ArrowProps) {
-//   return (
-//     <motion.span className='left-arrow-div' whileTap={{ scale: 0.6 }}>
-//       <StyledArrowContainer className="left-arrow" onClick={onClick}>
-//         <BsArrowLeft />
-//       </StyledArrowContainer>
-//     </motion.span>
-//   );
-// }

@@ -114,7 +114,7 @@ const FrontAdvert = () => {
               alt="main-pic-dark"
               width={900}
               height={600}
-              style={{ height: '110%' }}
+              style={{ height: '110%', width: '50%' }}
             />
           )}
           <StyledSocialIcons>

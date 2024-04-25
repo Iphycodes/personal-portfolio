@@ -28,7 +28,7 @@ const MyWorks = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 600,
     swipeToSlide: false,
     slideToShow: 1,
     slidesToScroll: 1,

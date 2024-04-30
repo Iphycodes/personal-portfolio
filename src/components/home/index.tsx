@@ -7,6 +7,7 @@ import ServicesSection from './libs/services-section';
 import SkillSection from './libs/skill-section';
 import ExperienceSection from './libs/experience';
 import MyWorks from './libs/my-works';
+import ContactMeSection from './libs/contact-me';
 
 const HomePage = () => {
   const { slideCurrent } = useContext(AppContext);
@@ -20,6 +21,7 @@ const HomePage = () => {
       <SkillSection />
       <ExperienceSection />
       <MyWorks />
+      <ContactMeSection />
     </>
   );
 };

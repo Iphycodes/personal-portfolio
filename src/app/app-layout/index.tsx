@@ -1,10 +1,11 @@
-import { ReactElement, useContext, useEffect } from "react";
-import Header from "../lib/header";
-import { AppLayoutContainer, AppLayoutContent } from "./index.styled";
-import { Desktop, Mobile } from "@/_shared/responsiveness";
-import MobileHeader from "../lib/mobile-header";
-import MobileSideBar from "../lib/mobile-sidebar";
-import { AppContext } from "@/app-context";
+import { ReactElement, useContext, useEffect } from 'react';
+import Header from '../lib/header';
+import { AppLayoutContainer, AppLayoutContent } from './index.styled';
+import { Desktop, Mobile } from '@/_shared/responsiveness';
+import MobileHeader from '../lib/mobile-header';
+import MobileSideBar from '../lib/mobile-sidebar';
+import { AppContext } from '@/app-context';
+import AppFooter from '../lib/footer';
 
 export interface AppLayoutProps {
   children?: ReactElement | ReactElement[];
@@ -12,11 +13,11 @@ export interface AppLayoutProps {
 
 const AppLayout = (props: AppLayoutProps) => {
   const { children } = props;
-  const {toggleSidebar, setToggleSidebar} = useContext(AppContext);
+  const { toggleSidebar, setToggleSidebar } = useContext(AppContext);
 
   useEffect(() => {
-    setToggleSidebar(false)
-  }, [])
+    setToggleSidebar(false);
+  }, []);
 
   return (
     <AppLayoutContainer>
@@ -24,11 +25,11 @@ const AppLayout = (props: AppLayoutProps) => {
         <Header />
       </Desktop>
       <Mobile>
-        <MobileHeader setToggleSidebar={setToggleSidebar}/>
-        <MobileSideBar toggleSidebar={toggleSidebar} setToogleSidebar={setToggleSidebar}/>
+        <MobileHeader setToggleSidebar={setToggleSidebar} />
+        <MobileSideBar toggleSidebar={toggleSidebar} setToogleSidebar={setToggleSidebar} />
       </Mobile>
-
       <AppLayoutContent onClick={() => setToggleSidebar(false)}>{children}</AppLayoutContent>
+      <AppFooter />
     </AppLayoutContainer>
   );
 };

@@ -101,7 +101,7 @@ const MyWorks = () => {
       <div className="main-title">My Works</div>
       <div className="about-desc-slider">
         <Slider
-          initialSlide={0}
+          initialSlide={1}
           {...settings}
           cssEase="ease-in-out"
           prevArrow={<PrevArrow />}

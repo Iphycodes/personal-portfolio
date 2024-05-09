@@ -12,7 +12,7 @@ import {
   AiOutlineLine,
   AiOutlineTwitter,
 } from 'react-icons/ai';
-import { Button, Col, Form, Input, Row } from 'antd';
+import { Col, Form, Input, Row } from 'antd';
 import { UserOutlined, MailOutlined } from '@ant-design/icons';
 
 const { TextArea } = Input;
@@ -85,7 +85,7 @@ const ContactMeSection: React.FC = () => {
               </Col>
             </Row>
 
-            <Row>
+            {/* <Row>
               <Col lg={24} xs={24}>
                 <Button
                   type="primary"
@@ -96,7 +96,7 @@ const ContactMeSection: React.FC = () => {
                   Send Message
                 </Button>
               </Col>
-            </Row>
+            </Row> */}
           </Form>
         </div>
       </ContactMeFormContainer>

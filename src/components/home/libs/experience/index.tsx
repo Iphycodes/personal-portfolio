@@ -61,7 +61,7 @@ const ExperienceSection = () => {
   };
 
   return (
-    <StyledExperienceContainer>
+    <StyledExperienceContainer id='experience-section'>
       <div className="title">Experience</div>
       <StyledExperienceItemsContainer className="experience-item-container">
         <Slider

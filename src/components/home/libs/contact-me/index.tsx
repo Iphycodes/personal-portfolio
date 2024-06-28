@@ -19,7 +19,7 @@ const { TextArea } = Input;
 
 const ContactMeSection: React.FC = () => {
   return (
-    <ContactMeContainer>
+    <ContactMeContainer id='contact-me-section'>
       <ContactMeDescriptionContainer>
         <div className="desc-container">
           <Image

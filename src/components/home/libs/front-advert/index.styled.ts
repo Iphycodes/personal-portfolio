@@ -1,38 +1,42 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 interface FrontAdvertContainerProps {
   isMobile: boolean;
 }
 
-export const StyledOuterContainer = styled.div`
+export const StyledOuterContainer = styled.div<FrontAdvertContainerProps>`
   display: flex;
   max-width: 100vw;
+  width: 100vw;
   margin: 0;
   overflow-x: hidden;
   height: 100vh;
   background-color: ${(props) => props.theme.secondaryColor};
   overflow-y: hidden;
   position: relative;
+  margin-top: ${(props) => (props.isMobile ? '60px' : '60px')};
+
+  /* max-width: calc(100vw - 100px);
+  width: calc(100vw - 100px); */
 `;
 
-export const LeftSider = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100%;
-  border-right: ${(props) => `1px solid ${props.theme.primaryColor}`};
-`;
+// export const LeftSider = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 100px;
+//   height: 100%;
+//   border-right: ${(props) => `1px solid ${props.theme.primaryColor}`};
+// `;
 
 export const StyledFrontAdvertContainer = styled.div<FrontAdvertContainerProps>`
-  max-width: calc(100vw - 100px);
-  width: calc(100vw - 100px);
   margin: 0;
   overflow-x: hidden;
   overflow-y: hidden;
   /* height: ${(props) => props.isMobile && '500px'}; */
   max-height: 100%;
-  background-image: ${(props) => (props.isMobile ? `url('/assets/svgs/FrontPicMobile.svg')` : '')};
+  /* background-image: ${(props) =>
+    props.isMobile ? `url('/assets/svgs/FrontPicMobile.svg')` : ''}; */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -40,20 +44,19 @@ export const StyledFrontAdvertContainer = styled.div<FrontAdvertContainerProps>`
   align-items: center;
   padding: ${(props) => (props.isMobile ? '0 24px' : '0 64px')};
   position: relative;
-  margin-top: ${(props) => (props.isMobile ? '60px' : '60px')};
 `;
 
-const gradientAnimation = keyframes`
-  0% {
-    background-position: -200% 0%;
-  }
-  50% {
-    background-position: 200% 0%;
-  }
-  100% {
-    background-position: -200% 0%;
-  }
-`;
+// const gradientAnimation = keyframes`
+//   0% {
+//     background-position: -200% 0%;
+//   }
+//   50% {
+//     background-position: 200% 0%;
+//   }
+//   100% {
+//     background-position: -200% 0%;
+//   }
+// `;
 
 export const StyledFrontContent = styled.div<FrontAdvertContainerProps>`
   display: flex;
@@ -76,7 +79,6 @@ export const StyledFrontContent = styled.div<FrontAdvertContainerProps>`
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      animation: ${gradientAnimation} 6s linear infinite;
       margin-bottom: 20px;
     }
 
@@ -98,6 +100,7 @@ export const StyledFrontContent = styled.div<FrontAdvertContainerProps>`
     font-size: 18px;
     font-family: 'Palanquin', sans-serif;
     letter-spacing: 4px;
+    /* margin-bottom: ${(props) => (props.isMobile ? '40px' : 0)}; */
 
     .view-works-circle {
       width: 80px;
@@ -107,6 +110,10 @@ export const StyledFrontContent = styled.div<FrontAdvertContainerProps>`
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    a {
+      color: ${(props) => props.theme.primaryText};
     }
   }
 
@@ -131,7 +138,7 @@ export const StyledBrandIcons = styled.div<FrontAdvertContainerProps>`
   align-items: center;
   width: 100%;
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   /* justify-content: ${(props) => (props.isMobile ? 'center' : 'flex-start')} */
 `;
 

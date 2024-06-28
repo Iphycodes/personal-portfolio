@@ -5,6 +5,34 @@ html[data-theme='light'] .ant-modal {
   padding-bottom: 0;
 }
 
+.video-modal {
+  padding: 0 !important;
+  top: 100px !important;
+
+  .ant-modal-content {
+    padding: 0 !important;
+  }
+}
+
+.ant-modal-close {
+  position: fixed !important;
+  top: 15px !important; /* Adjust the top position as needed */
+  right: 24px !important; /* Adjust the right position as needed */
+  z-index: 1001 !important; /* Ensure the close button appears above other content */
+  height: 30px !important;
+  width: 30px !important;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+
+  .ant-modal-close-x {
+    color: #ffffff !important;
+    font-size: 22px !important;
+    font-weight: bolder !important;
+  }
+}
+
 html[data-theme='light'] .ant-modal-header {
   background-color: $primary;
   color: $text-color-inverse;

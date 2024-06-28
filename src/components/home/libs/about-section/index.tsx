@@ -140,7 +140,7 @@ const AboutSection = (props: AboutSectionProps) => {
   }
 
   return (
-    <StyledAboutSectionContainer isMobile={isMobile} style={{}}>
+    <StyledAboutSectionContainer isMobile={isMobile} style={{}} id="about-me">
       <StyledAboutImagesContainer>
         <div className="image-container left">
           <Image

@@ -97,7 +97,7 @@ const MyWorks = () => {
   ];
 
   return (
-    <StyledMyWorksContainer>
+    <StyledMyWorksContainer id='myworks-section'>
       <div className="main-title">My Works</div>
       <div className="about-desc-slider">
         <Slider

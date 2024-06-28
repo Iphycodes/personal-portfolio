@@ -6,16 +6,18 @@ interface AboutSectionProps {
 
 export const StyledAboutSectionContainer = styled.div<AboutSectionProps>`
   max-width: 100vw;
+  width: 100vw;
   margin: 0;
   overflow-x: hidden;
   background-color: ${(props) => props.theme.secondaryColor};
   display: flex;
+  flex-direction: ${(props) => (props.isMobile ? 'column' : 'row')};
   justify-content: space-between;
   gap: 50px;
   padding: ${(props) => (props.isMobile ? '24px' : '64px 120px 0')};
   padding-bottom: 0;
   position: relative;
-  height: ${(props) => (props.isMobile ? '900px' : '')};
+  /* height: ${(props) => (props.isMobile ? '900px' : '')}; */
 `;
 
 export const StyledAboutImageSection = styled.div<AboutSectionProps>`
@@ -34,6 +36,7 @@ export const StyledAboutSectionContent = styled.div<AboutSectionProps>`
   justify-content: flex-start;
   padding: ${(props) => (props.isMobile ? '24px 0' : '5px 0 0')};
   width: ${(props) => (props.isMobile ? '100%' : '50%')};
+  min-height: ${(props) => props.isMobile && '800px'};
 
   .content-title {
     font-family: ${(props) => props.theme.fonts.jost};

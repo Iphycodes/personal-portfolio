@@ -13,7 +13,7 @@ export const HeaderContainer = styled.div`
   padding: 10px 64px;
   align-items: center;
   border-bottom: ${(props) => `2px solid ${props.theme.primaryColor}`};
-  z-index: 10;
+  z-index: 100;
   background-color: ${(props) => props.theme.secondaryColor};
   position: fixed;
   top: 0;
@@ -32,7 +32,7 @@ export const NavLinksContainer = styled.div`
   }
 `;
 
-export const StyledLink = styled.div<StyledLinkProps>`
+export const StyledLink = styled.a<StyledLinkProps>`
   color: ${(props) => props.theme.primaryText};
   position: relative;
   cursor: pointer;
@@ -42,6 +42,12 @@ export const StyledLink = styled.div<StyledLinkProps>`
     position: absolute;
     top: 2px;
     right: -7px;
+  }
+
+  .upcoming-event {
+    display: flex;
+    align-items: center;
+    gap: 5px;
   }
 `;
 

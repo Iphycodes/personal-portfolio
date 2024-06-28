@@ -6,7 +6,8 @@ interface TimeExperienceSectionProps {
 
 export const StyledTimeExperienceSectionContainer = styled.div<TimeExperienceSectionProps>`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  width: 100%;
   align-items: center;
   padding: ${(props) => (props.isMobile ? '0 24px' : '0 64px')};
   margin: ${(props) => (props.isMobile ? '40px 0' : '64px 0')};
@@ -19,7 +20,7 @@ export const StyledTimeExperienceBox = styled.div<TimeExperienceSectionProps>`
   align-items: center;
   /* margin: 0 auto; */
   height: ${(props) => (props.isMobile ? '240px' : '328px')};
-  width: ${(props) => (props.isMobile ? '40%' : '25%')};
+  width: ${(props) => (props.isMobile ? '80%' : '25%')};
   background-color: ${(props) => props.theme.secondaryColor};
 
   .year {
@@ -42,7 +43,7 @@ export const StyledTimeExperienceBox = styled.div<TimeExperienceSectionProps>`
 `;
 
 export const StyledTimeExperinceContent = styled.div<TimeExperienceSectionProps>`
-  width: ${(props) => (props.isMobile ? '50%' : '70%')};
+  width: ${(props) => (props.isMobile ? 0 : '70%')};
 `;
 
 export const StyledTimeExperinceContentItems = styled.div<TimeExperienceSectionProps>`

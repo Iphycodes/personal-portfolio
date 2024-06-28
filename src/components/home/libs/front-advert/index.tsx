@@ -1,7 +1,6 @@
-import React from 'react';
-import { mediaSize, useMediaQuery } from '@/_shared/responsiveness';
+import React, { useState } from 'react';
+import { Desktop, mediaSize, useMediaQuery } from '@/_shared/responsiveness';
 import {
-  LeftSider,
   StyledBrandIcons,
   StyledFrontAdvertContainer,
   StyledFrontContent,
@@ -28,10 +27,13 @@ import {
   UpworkIconBig,
 } from '@/_shared/assets/svgs';
 import Image from 'next/image';
-import ThemeToggle from './lib/theme-toggle';
+// import ThemeToggle from '../../../../app/lib/theme-toggle';
+import Link from 'next/link';
+import VideoModal from '../video-modal';
 
 const FrontAdvert = () => {
   const isMobile = useMediaQuery(mediaSize.mobile);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState<boolean>(false);
 
   const mobileBrandIcons = [
     {
@@ -64,11 +66,8 @@ const FrontAdvert = () => {
   ];
 
   return (
-    <div className="background">
-      <StyledOuterContainer>
-        <LeftSider>
-          <ThemeToggle />
-        </LeftSider>
+    <div className="background" style={{ width: '100%' }}>
+      <StyledOuterContainer isMobile={isMobile}>
         <StyledFrontAdvertContainer isMobile={isMobile}>
           <StyledFrontContent isMobile={isMobile} style={{ gap: isMobile ? 0 : 0 }}>
             <div className="description">
@@ -85,7 +84,7 @@ const FrontAdvert = () => {
                 <span className="view-works-circle">
                   <BsArrowUpRight color="#ffffff" size={28} style={{ fontWeight: '900' }} />
                 </span>
-                <span>VIEW MY WORKS</span>
+                <Link href={'#myworks-section'}>VIEW MY WORKS</Link>
               </div>
             </div>
           </StyledFrontContent>
@@ -99,7 +98,7 @@ const FrontAdvert = () => {
                     return <div key={index}>{bigBrandIcon.icon}</div>;
                   })}
 
-              <StyledIntroContainer>
+              <StyledIntroContainer onClick={() => setIsVideoModalOpen(true)}>
                 <span className="intro-circle">
                   <BsFillPlayFill size={30} />
                 </span>
@@ -117,18 +116,21 @@ const FrontAdvert = () => {
               style={{ height: '110%', width: '50%' }}
             />
           )}
-          <StyledSocialIcons>
-            <span className="follow-me-text">Follow Me</span>
-            <AiOutlineLine className="follow-me-text" style={{ marginTop: '3px' }} />
-            <span>/</span>
-            <AiOutlineInstagram className="social-icon" />
-            <span>/</span>
-            <AiOutlineTwitter className="social-icon" />
-            <span>/</span>
-            <AiFillFacebook className="social-icon" />
-          </StyledSocialIcons>
+          <Desktop>
+            <StyledSocialIcons>
+              <span className="follow-me-text">Follow Me</span>
+              <AiOutlineLine className="follow-me-text" style={{ marginTop: '3px' }} />
+              <span>/</span>
+              <AiOutlineInstagram className="social-icon" />
+              <span>/</span>
+              <AiOutlineTwitter className="social-icon" />
+              <span>/</span>
+              <AiFillFacebook className="social-icon" />
+            </StyledSocialIcons>
+          </Desktop>
         </StyledFrontAdvertContainer>
       </StyledOuterContainer>
+      <VideoModal isModalOpen={isVideoModalOpen} setIsModalOpen={setIsVideoModalOpen} />
     </div>
   );
 };

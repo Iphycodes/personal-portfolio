@@ -6,10 +6,25 @@ interface ExperienceProps {
 
 export const StyledExperienceContainer = styled.div<ExperienceProps>`
   /* background-color: red; */
-  padding: ${(props) => (props.isMobile ? '40px 0' : '96px 20px')};
+  /* padding: ${(props) => (props.isMobile ? '40px 0' : '96px 20px')}; */
+  /* 
   display: flex;
   flex-direction: column;
   max-width: 100vw;
+  text-align: center; */
+
+  /* padding: ${(props) => (props.isMobile ? '40px 24px' : '96px 64px')};
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  width: 100vw;
+  text-align: center; */
+
+  padding: ${(props) => (props.isMobile ? '40px 24px' : '96px 64px')};
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  width: 100%;
   text-align: center;
 
   .title {
@@ -23,14 +38,20 @@ export const StyledExperienceContainer = styled.div<ExperienceProps>`
   }
 `;
 
-export const StyledExperienceItemsContainer = styled.div`
-  /* display: flex; */
+export const StyledExperienceItemsContainer = styled.div<ExperienceProps>`
+  display: flex;
   position: relative;
   justify-content: space-between;
   width: 100%;
 
+  /* 
+  width: ${(props) => (props.isMobile ? '40%' : '100%')};
+  justify-content: space-between;
+  gap: 40px;
+  position: relative; */
+
   .slider {
-    padding: 0 240px !important;
+    padding: ${(props) => (props.isMobile ? 0 : '0 240px')} !important;
   }
 
   .current {
@@ -49,12 +70,23 @@ export const StyledExperienceItemsContainer = styled.div`
   .experience-item {
     padding: 40px 30px;
     min-height: 350px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    margin: 0 auto;
     text-align: center;
     max-width: 300px;
     /* background-color: blue; */
+
+    /* padding: 40px 64px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
+  background-color: ${(props) => props.theme.secondaryColor}; */
 
     .icon {
       color: ${(props) => props.theme.accent};

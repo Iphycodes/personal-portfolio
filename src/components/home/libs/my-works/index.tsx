@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import { motion } from 'framer-motion';
 import { CSSProperties } from 'styled-components';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import { mediaSize, useMediaQuery } from '@/_shared/responsiveness';
 
 type ArrowProps = {
   className?: string;
@@ -13,17 +14,7 @@ type ArrowProps = {
 };
 
 const MyWorks = () => {
-  // const settings = {
-  //   dots: false,
-  //   infinite: true,
-  //   speed: 500,
-  //   swipeToSlide: true,
-  //   slideToShow: 1,
-  //   slidesToScroll: 1,
-  //   autoplay: false,
-  //   autoplaySpeed: 5000,
-  //   fade: true,
-  // };
+  const isMobile = useMediaQuery(mediaSize.mobile);
 
   const settings = {
     dots: false,
@@ -97,7 +88,7 @@ const MyWorks = () => {
   ];
 
   return (
-    <StyledMyWorksContainer id='myworks-section'>
+    <StyledMyWorksContainer id="myworks-section" isMobile={isMobile}>
       <div className="main-title">My Works</div>
       <div className="about-desc-slider">
         <Slider

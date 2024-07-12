@@ -5,10 +5,11 @@ interface ContactMeProps {
 }
 
 export const ContactMeContainer = styled.div<ContactMeProps>`
-  max-width: 100vw;
+  max-width: 100%;
+  width: 100%;
   margin: 0;
   overflow-x: hidden;
-  padding: ${(props) => (props.isMobile ? '24px' : '120px 240px')};
+  padding: ${(props) => (props.isMobile ? '64px 48px' : '120px 240px')};
   display: flex;
   justify-content: center;
   gap: 200px;
@@ -43,13 +44,15 @@ export const ContactMeDescriptionContainer = styled.div`
   }
 `;
 
-export const ContactMeFormContainer = styled.div`
+export const ContactMeFormContainer = styled.div<ContactMeProps>`
   display: flex;
   justify-content: center;
+  width: ${(props) => (props.isMobile ? '100%' : '600px')};
 
   .form-container {
-    padding: 40px 60px;
-    width: 600px;
+    padding: ${(props) => (props.isMobile ? '40px 20px' : '40px 60px')};
+    /* width: ${(props) => (props.isMobile ? '100%' : '600px')}; */
+    width: 100%;
     background-color: ${(props) => props.theme.secondaryColor};
 
     .title {

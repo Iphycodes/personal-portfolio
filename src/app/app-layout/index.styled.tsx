@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 interface Props {
   isDesktop: boolean;
+  isMobile: boolean;
 }
 
 export const AppLayoutContainer = styled.div`
@@ -11,7 +12,7 @@ export const AppLayoutContainer = styled.div`
 `;
 
 export const AppLayoutContent = styled.div<Props>`
-  width: calc(100% - 60px);
+  width: ${(props) => (props.isMobile ? '100%' : 'calc(100% - 60px)')};
   margin-left: ${(props) => (props.isDesktop ? '60px' : 0)};
 `;
 

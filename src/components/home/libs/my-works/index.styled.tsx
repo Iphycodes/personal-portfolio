@@ -17,6 +17,7 @@ export const StyledMyWorksContainer = styled.div<MyWorksProps>`
 
   .main-content {
     display: flex !important;
+    flex-direction: ${(props) => (props.isMobile ? 'column' : 'row')};
     justify-content: space-between;
     width: 100%;
     padding: 1px;
@@ -49,14 +50,14 @@ export const StyledMyWorksContainer = styled.div<MyWorksProps>`
 
     .my-works-image {
       /* box-shadow: 10px 3px 50px 10px rgba(137, 137, 137, 0.2); */
-      width: 60%;
-      max-width: 60%;
+      width: ${(props) => (props.isMobile ? '100%' : '60%')};
+      max-width: ${(props) => (props.isMobile ? '100%' : '60%')};
       .img {
       }
     }
   }
 
-  max-width: 100vw;
+  max-width: 100%;
   margin: 0;
   overflow-x: hidden;
   background-color: ${(props) => props.theme.secondaryColor};
@@ -70,6 +71,7 @@ export const StyledMyWorksContainer = styled.div<MyWorksProps>`
       display: 'inline-block';
       z-index: 1;
       right: 60px;
+      /* left: ${(props) => (props.isMobile ? 0 : '')}; */
       top: -70px;
       position: absolute !important;
     }
@@ -78,6 +80,7 @@ export const StyledMyWorksContainer = styled.div<MyWorksProps>`
       display: inline-block;
       z-index: 1;
       right: 0;
+      /* left: ${(props) => (props.isMobile ? '60px' : '')}; */
       top: -70px;
       position: absolute !important;
     }

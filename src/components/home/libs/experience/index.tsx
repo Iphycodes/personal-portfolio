@@ -61,9 +61,9 @@ const ExperienceSection = () => {
   };
 
   return (
-    <StyledExperienceContainer id='experience-section'>
+    <StyledExperienceContainer isMobile={isMobile}>
       <div className="title">Experience</div>
-      <StyledExperienceItemsContainer className="experience-item-container">
+      <StyledExperienceItemsContainer className="experience-item-container" isMobile={isMobile}>
         <Slider
           {...{ ...settings, slidesToShow: isMobile ? 1 : 3 }}
           nextArrow={<NextArrow />}

@@ -78,7 +78,7 @@ const FrontAdvert = () => {
               <div className="role">SOFTWARE DEVELOPER</div>
               <div className="about-me">
                 As a passionate frontend developer, I blend creativity and technical expertise to
-                bring digital visions to life.
+                bring digital visions to life
               </div>
               <div className="view-works-container">
                 <span className="view-works-circle">

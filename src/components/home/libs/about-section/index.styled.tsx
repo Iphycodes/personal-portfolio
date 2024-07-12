@@ -166,10 +166,10 @@ export const StyledArrowContainer = styled.span`
   }
 `;
 
-export const StyledAboutImagesContainer = styled.div`
+export const StyledAboutImagesContainer = styled.div<AboutSectionProps>`
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: ${(props) => (props.isMobile ? '10px' : '40px')};
 
   .image-container {
     max-width: 300px;

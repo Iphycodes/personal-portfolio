@@ -141,12 +141,12 @@ const AboutSection = (props: AboutSectionProps) => {
 
   return (
     <StyledAboutSectionContainer isMobile={isMobile} style={{}} id="about-me">
-      <StyledAboutImagesContainer>
+      <StyledAboutImagesContainer isMobile={isMobile}>
         <div className="image-container left">
           <Image
             src={'/assets/imgs/suit-pic.jpg'}
             alt="suite-pic"
-            width={300}
+            width={isMobile ? 250 : 300}
             height={450}
             style={{ width: '100%', height: '100%' }}
           />
@@ -156,7 +156,7 @@ const AboutSection = (props: AboutSectionProps) => {
             <Image
               src={'/assets/imgs/graduating-pic.jpg'}
               alt="graduating-pic"
-              width={300}
+              width={isMobile ? 250 : 300}
               height={380}
               style={{ width: '100%', height: '100%', borderRadius: '30px' }}
             />

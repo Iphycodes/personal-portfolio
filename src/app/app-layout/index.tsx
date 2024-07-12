@@ -16,6 +16,7 @@ const AppLayout = (props: AppLayoutProps) => {
   const { children } = props;
   const { toggleSidebar, setToggleSidebar } = useContext(AppContext);
   const isDesktop = useMediaQuery(mediaSize.desktop);
+  const isMobile = useMediaQuery(mediaSize.mobile);
 
   useEffect(() => {
     setToggleSidebar(false);
@@ -35,7 +36,11 @@ const AppLayout = (props: AppLayoutProps) => {
           <ThemeToggle />
         </LeftSider>
       </Desktop>
-      <AppLayoutContent isDesktop={isDesktop} onClick={() => setToggleSidebar(false)}>
+      <AppLayoutContent
+        isDesktop={isDesktop}
+        isMobile={isMobile}
+        onClick={() => setToggleSidebar(false)}
+      >
         {children}
       </AppLayoutContent>
       <AppFooter />

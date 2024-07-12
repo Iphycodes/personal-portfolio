@@ -6,10 +6,12 @@ import {
   AiOutlineLine,
   AiOutlineTwitter,
 } from 'react-icons/ai';
+import { mediaSize, useMediaQuery } from '@/_shared/responsiveness';
 
 const AppFooter: React.FC = () => {
+  const isMobile = useMediaQuery(mediaSize.mobile);
   return (
-    <FooterContainer>
+    <FooterContainer isMobile={isMobile}>
       <div className="big-text">
         HAVE ANY PROJECT IN MIND? <br />
         GET IN <span className="touch">TOUCH</span>

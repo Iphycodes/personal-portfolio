@@ -14,37 +14,42 @@ import {
 } from 'react-icons/ai';
 import { Col, Form, Input, Row } from 'antd';
 import { UserOutlined, MailOutlined } from '@ant-design/icons';
+import { Desktop, mediaSize, useMediaQuery } from '@/_shared/responsiveness';
 
 const { TextArea } = Input;
 
 const ContactMeSection: React.FC = () => {
+  const isMobile = useMediaQuery(mediaSize.mobile);
   return (
-    <ContactMeContainer id='contact-me-section'>
-      <ContactMeDescriptionContainer>
-        <div className="desc-container">
-          <Image
-            className="image"
-            src={'/assets/imgs/contact-animation.gif'}
-            alt="my-image"
-            width={500}
-            height={800}
-          />
-          <div className="email-box">
-            <span>Mail: </span>ifeanyiemmanuel585@gmail.com
+    <ContactMeContainer id="contact-me-section" isMobile={isMobile}>
+      <Desktop>
+        <ContactMeDescriptionContainer>
+          <div className="desc-container">
+            <Image
+              className="image"
+              src={'/assets/imgs/contact-animation.gif'}
+              alt="my-image"
+              width={500}
+              height={800}
+            />
+            <div className="email-box">
+              <span>Mail: </span>ifeanyiemmanuel585@gmail.com
+            </div>
+            <StyledSocialIcons>
+              <span className="follow-me-text">Follow Me</span>
+              <AiOutlineLine className="follow-me-text" style={{ marginTop: '3px' }} />
+              <span>/</span>
+              <AiOutlineInstagram className="social-icon" />
+              <span>/</span>
+              <AiOutlineTwitter className="social-icon" />
+              <span>/</span>
+              <AiFillFacebook className="social-icon" />
+            </StyledSocialIcons>
           </div>
-          <StyledSocialIcons>
-            <span className="follow-me-text">Follow Me</span>
-            <AiOutlineLine className="follow-me-text" style={{ marginTop: '3px' }} />
-            <span>/</span>
-            <AiOutlineInstagram className="social-icon" />
-            <span>/</span>
-            <AiOutlineTwitter className="social-icon" />
-            <span>/</span>
-            <AiFillFacebook className="social-icon" />
-          </StyledSocialIcons>
-        </div>
-      </ContactMeDescriptionContainer>
-      <ContactMeFormContainer>
+        </ContactMeDescriptionContainer>
+      </Desktop>
+
+      <ContactMeFormContainer isMobile={isMobile}>
         <div className="form-container">
           <div className="title">Contact Me</div>
           <Form

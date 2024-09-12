@@ -63,7 +63,7 @@ const Header = () => {
                 height={30}
                 style={{ width: '30px', height: '30px' }}
               />
-              <span style={{ color: 'var(--accent)' }}>Upcoming events</span>
+              <span style={{ color: 'var(--accent)' }}>Upcoming event</span>
             </span>
             {pathUrl[1] === 'events' && <LinkCircle className={'link-circle'} />}
           </StyledLink>{' '}
